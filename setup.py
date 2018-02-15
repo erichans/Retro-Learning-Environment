@@ -21,7 +21,7 @@ def run_cmake():
     new_dir = op.join(op.split(__file__)[0], 'build')
     dd.mkpath(new_dir)
     os.chdir(new_dir)
-    cmake_args = ' -DBUILD_EXAMPLES=OFF -DBUILD_PYTHON=ON'
+    cmake_args = ' -DBUILD_EXAMPLES=OFF -DBUILD_PYTHON=ON -DUSE_SDL=ON'
     cores_to_use = max(1, multiprocessing.cpu_count() - 1)
 
     try:
